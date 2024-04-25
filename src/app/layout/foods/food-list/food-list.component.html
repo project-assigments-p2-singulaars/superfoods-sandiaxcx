@@ -1,0 +1,9 @@
+<ul>
+    @for (food of foods; track food.id) {
+        <img [src]="food.image" alt="{{food.name}}">
+        <p>{{food.name}}</p>
+        <p>{{food.calories}}</p>
+        <p>{{food.image}}</p>
+        <p>{{food.quantity}}</p>
+    }
+</ul>
