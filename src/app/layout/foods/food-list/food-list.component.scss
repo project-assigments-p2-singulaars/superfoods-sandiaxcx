@@ -1,0 +1,23 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    background-color: burlywood;
+
+}
+
+ul{
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    li{
+        list-style: none;
+        border: 1px solid black;
+        
+            img{
+            width: 20vw;
+        }
+    }
+}

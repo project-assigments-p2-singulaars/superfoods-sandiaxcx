@@ -1,9 +1,12 @@
+<div class="foodDetail">
 <ul>
     @for (food of foods; track food.id) {
+        <li>
         <img [src]="food.image" alt="{{food.name}}">
         <p>{{food.name}}</p>
         <p>{{food.calories}}</p>
-        <p>{{food.image}}</p>
         <p>{{food.quantity}}</p>
+        </li>
     }
 </ul>
+</div>
