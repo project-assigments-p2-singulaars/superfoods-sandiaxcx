@@ -1,12 +1,44 @@
-<div class="foodDetail">
-<ul>
-    @for (food of foods; track food.id) {
-        <li>
-        <img [src]="food.image" alt="{{food.name}}">
-        <p>{{food.name}}</p>
-        <p>{{food.calories}}</p>
-        <p>{{food.quantity}}</p>
-        </li>
-    }
-</ul>
+<div class="search">
+    <input type="text" placeholder={{valuePlaceholder}} [(ngModel)]="inputValue">
+    <button (click)="searchFood()">Search</button>
 </div>
+
+<div class="foodDetail">
+    <ul>
+        @if (filterArray.length >0) {
+            @for (food of filterArray; track food.id) {
+                <li>
+                    <div class="topCard">
+                        <img [src]="food.image" alt={{food.name}}>
+                        <p class="foodName">{{food.name}}</p>
+                        <p>{{food.calories}} cal.</p>
+                    </div>
+                    <div class="bottomCard">
+                        <button><img src="../../../../assets/subtraction-sign.png" alt=""></button>
+                        <p>{{food.quantity}}</p>
+                        <button><img src="../../../../assets/plus.png" alt=""></button>
+                    </div>
+                </li>
+            }
+        }
+            @else {
+                @for (food of foodProducts; track food.id) {
+                    <li>
+                        <div class="topCard">
+                            <img [src]="food.image" alt="{{food.name}}">
+                            <p class="foodName">{{food.name}}</p>
+                            <p>{{food.calories}} cal.</p>
+                        </div>
+                        <div class="bottomCard">
+                            <button><img src="../../../../assets/subtraction-sign.png" alt=""></button>
+                            <p>{{food.quantity}}</p>
+                            <button><img src="../../../../assets/plus.png" alt=""></button>
+                        </div>
+                    </li>
+                }
+            }
+    </ul>
+</div>
+
+<!-- ADD PRODUCTS TO CART
+https://angular.io/start/start-data -->

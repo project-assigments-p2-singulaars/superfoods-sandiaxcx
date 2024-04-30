@@ -1,0 +1,16 @@
+:host{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+
+    .cart{
+        margin-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40vw;
+        height: 40vh;
+        background-color: burlywood;
+    }
+}

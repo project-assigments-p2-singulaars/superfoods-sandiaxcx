@@ -3,7 +3,7 @@ import { Foods } from "../shared/interfaces/foods";
 const foods: Foods[] = [
     
   {
-    id: 1,
+      id: 1,
       name: "Pizza",
       calories: 400,
       image: "https://i.imgur.com/eTmWoAN.png",
