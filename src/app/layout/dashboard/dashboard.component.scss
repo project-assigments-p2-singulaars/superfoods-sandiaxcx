@@ -2,15 +2,15 @@
     width: 100%;
     display: flex;
     justify-content: center;
-
+    // background-image: url(../../../assets/dots.jpg);
 
     .cart{
-        margin-top: 5rem;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 40vw;
         height: 40vh;
-        background-color: burlywood;
+        background-color: rgb(0, 0, 0);
+        position: fixed;
     }
 }

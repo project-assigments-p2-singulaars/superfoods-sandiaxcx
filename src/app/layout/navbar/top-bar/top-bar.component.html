@@ -1,9 +1,19 @@
 <div class="titleContainer">
-    <h3>Your SuperFoods</h3>
+    <img src="../../../assets/logo.png" alt="">
 </div>
 
 <div class="buttonContainer">
-    <button>
-        <p>+</p>
+    <button (click)="onPress()">
+    +
     </button>
 </div>
+
+<div class="formContainer" [hidden]="!display">
+    <app-form></app-form>  
+</div>
+<!-- 
+@if (display === true){
+    <app-form></app-form>}
+    @else {
+        <app-form deactivated></app-form>
+    } -->

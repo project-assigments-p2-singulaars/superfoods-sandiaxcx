@@ -1,16 +1,18 @@
 :host{
-    display: grid;
-    grid-template-columns: 33% 34% 33%;
+    // display: grid;
+    // grid-template-columns: 33% 34% 33%;
     width: 100%;
     background-color: rgb(168, 32, 57);
 }
 
 .buttonContainer{
-    grid-column-start: 3;
-    grid-column-end: 4;
+    // grid-column-start: 3;
+    // grid-column-end: 4;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 
         button{
             width: 2rem;
@@ -18,14 +20,20 @@
         }
 }
 
+.formContainer{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
 .titleContainer{
-    grid-column-start: 2;
-    grid-column-end: 3;
+    // grid-column-start: 2;
+    // grid-column-end: 3;
     display: flex;
     justify-content: center;
     align-items: center;
 
-        h3{
-            font-weight: bold;
+        img{
+            width: 12rem;
         }
 }

@@ -1,6 +1,7 @@
 <div class="search">
-    <input type="text" placeholder={{valuePlaceholder}} [(ngModel)]="inputValue">
-    <button (click)="searchFood()">Search</button>
+    <input type="text" (input)="searchFood()" placeholder={{valuePlaceholder}} [(ngModel)]="inputValue">
+    <!-- <button (click)="searchFood()">Search</button> -->
+    <button>Search</button>
 </div>
 
 <div class="foodDetail">
@@ -17,8 +18,9 @@
                         <button><img src="../../../../assets/subtraction-sign.png" alt=""></button>
                         <p>{{food.quantity}}</p>
                         <button><img src="../../../../assets/plus.png" alt=""></button>
+                        <!-- <button (click)="addToDash(food)">Add To Dashboard</button> -->
                     </div>
-                </li>
+                </li> 
             }
         }
             @else {
@@ -31,8 +33,9 @@
                         </div>
                         <div class="bottomCard">
                             <button><img src="../../../../assets/subtraction-sign.png" alt=""></button>
-                            <p>{{food.quantity}}</p>
+                            <input type="number" value="{{food.quantity}}">
                             <button><img src="../../../../assets/plus.png" alt=""></button>
+                            <!-- <button (click)="addToDash(food)">Add To Dashboard</button> -->
                         </div>
                     </li>
                 }
