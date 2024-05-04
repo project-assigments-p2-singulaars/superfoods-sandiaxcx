@@ -9,7 +9,7 @@
 </div>
 
 <div class="formContainer" [hidden]="!display">
-    <app-form></app-form>  
+    <app-form (formSent)="registerProduct($event)"></app-form>
 </div>
 <!-- 
 @if (display === true){
