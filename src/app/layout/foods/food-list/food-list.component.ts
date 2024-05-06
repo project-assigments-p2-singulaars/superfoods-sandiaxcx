@@ -25,11 +25,6 @@ export class FoodListComponent implements OnInit{
     //   this.foods = this.foodsService.getAllProducts()  
     // }
     
-    //SENT TO LEFT /////
-    // dashboardService = inject(DashboardService)
-    // addToDash(food: any){
-    //   this.dashboardService.addToDash(food)
-    // }
     
     //OLD SEARCH & FORM & PRINTING:: ////////////////////////////
   //   valuePlaceholder = "Find your food";
@@ -68,7 +63,6 @@ export class FoodListComponent implements OnInit{
     constructor(private foodsService: FoodsService) {}
   
     ngOnInit(): void {
-      // Initialize foodProducts array using the service method
       this.foodProducts = this.foodsService.getAllProducts();
     }
   
@@ -80,11 +74,18 @@ export class FoodListComponent implements OnInit{
     }
   
     registerProduct(food: Foods) {
-      // Add the emitted food object to the foodProducts array
       this.foodProducts.push(food);
-      // Update the data in the service as well if needed
       this.foodsService.addProduct(food);
       console.log(food);
     }
 
+    dashboardService = inject(DashboardService)
+    addToDash(food: any){
+    this.dashboardService.addItem(food)
+    }
+
+    // addItemToDash(foods: any): void {
+    //   this.dashboardService.addItem(foods);
+    // }
+    
   }

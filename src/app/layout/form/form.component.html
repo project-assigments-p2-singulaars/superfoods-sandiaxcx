@@ -33,7 +33,7 @@
 <form #foodForm="ngForm" (ngSubmit)="submit(foodForm)">
     <div>
         <label for="image">Product Image:</label>
-        <input type="file" #foodImage="ngModel" name="image" ngModel>
+        <input type="string" #foodImage="ngModel" name="image" ngModel>
         <!-- @if(form.controls.image.touched && form.controls.image.errors?.['required']){
             <p>Image is required</p>
         } -->
