@@ -1,35 +1,40 @@
 :host{
     width: 100%;
     display: flex;
-    // justify-content: center;
-    // background-image: url(../../../assets/dots.jpg);
+    justify-content: center;
+    position: sticky;
 
     .dashboard{
         display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 40vw;
+        height: 60vh;
         background-color: rgb(255, 255, 255);
-        border: 2px solid black;
+        border: 0.3rem solid black;
+        border-radius: 2rem;
+        overflow-y: scroll;
+
+        .total{
+            font-weight: bold;
+            font-size: 1.5rem;
+            padding-top: 0.5rem;
+            position: fixed;
+            background-color: white;
+            margin-top: 0px;
+        }
+
         img{
             width: 10rem;
         }
-}
+    }
 }
 
 ul{
     margin-top: 2rem;
     gap: 2rem;
-    display: flex;
-    flex-direction: column;
-
-
-    li{
-        display: flex;
-        flex-direction: column;
-
-        list-style: none;
-        border: 1px solid black;
-        background-color: white;
-        // height: 35vh;
+    border: 0.3rem rgb(168, 32, 57) solid;
+    border-radius: 2rem;
 
         .topCard{
             display: flex;
@@ -58,4 +63,3 @@ ul{
             }
         }
     }
-}

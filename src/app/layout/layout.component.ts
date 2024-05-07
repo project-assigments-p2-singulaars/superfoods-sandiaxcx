@@ -17,7 +17,5 @@ export class LayoutComponent {
     display = false;
     onPress() {
       this.display = true;
-        // toggleStepper = false;
-
-}
+    }
 }

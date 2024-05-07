@@ -17,7 +17,6 @@ export class TopBarComponent{
   constructor(private foodsService: FoodsService) {}
 
   ngOnInit(): void {
-    // Initialize foodProducts array using the service method
     this.foodProducts = this.foodsService.getAllProducts();
   }
   
@@ -26,11 +25,9 @@ export class TopBarComponent{
   onPress() {
     this.display = !this.display;}
 
-    registerProduct(food: Foods) {
-      // Add the emitted food object to the foodProducts array
-      this.foodProducts.push(food);
-      // Update the data in the service as well if needed
-      this.foodsService.addProduct(food);
-      console.log(food);
-    }
+  registerProduct(food: Foods) {
+    this.foodProducts.push(food);
+    this.foodsService.addProduct(food);
+    console.log(food);
+  }
 }

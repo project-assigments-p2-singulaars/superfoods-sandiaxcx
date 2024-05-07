@@ -1,17 +1,7 @@
-<!-- <app-food-list></app-food-list> -->
-<!-- <div class="dash">
-
-    <button (click)="removeItem(item.id)" class="remove-button">Remove</button>
-    <!-- <p>{{ item | json }}</p> -->
-  <!-- </div>
-
-  <hr>
-
-  <div class="total-amount">
-    <strong>Total:</strong> £{{ totalAmount }}
-  </div>  -->
-
   <div class="dashboard">
+    <div class="total">
+      <p>Total Calories: {{ getTotalCalories() }}</p>
+    </div>
     <ul>
       @for (dash of dashboardService.getItems(); track dash.id){
         <div class="topCard">
@@ -20,7 +10,6 @@
           <p>{{dash.calories}} cal.</p>
       </div>
       <div class="bottomCard">
-        <!-- <button (click)="addToDash(food)">Add To Dashboard</button> -->
         <p>Quantity:{{dash.quantity}}</p>
       </div>
       }

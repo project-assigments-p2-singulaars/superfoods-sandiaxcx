@@ -1,6 +1,5 @@
 <div class="search">
     <input type="text" (input)="searchFood()" placeholder={{valuePlaceholder}} [(ngModel)]="inputValue">
-    <!-- <button (click)="searchFood()">Search</button> -->
     <button>Search</button>
 </div>
 
@@ -15,11 +14,8 @@
                         <p>{{food.calories}} cal.</p>
                     </div>
                     <div class="bottomCard">
-                        <!-- <button><img src="../../../../assets/subtraction-sign.png" alt=""></button>     -->
-                        <p>{{food.quantity}}</p>
-                        <!-- <button><img src="../../../../assets/plus.png" alt=""></button> -->
-                        <!-- <button (click)="addToDash(food)">Add To Dashboard</button> -->
-                        <button class="addToDash"><img src="../../../../assets/plus.png" alt=""></button>
+                        <p>Quantity:</p><input type="number" value="{{food.quantity}}">
+                        <button (click)="addToDash(food)">Add!</button>
                     </div>
                 </li> 
             }
@@ -33,21 +29,11 @@
                             <p>{{food.calories}} cal.</p>
                         </div>
                         <div class="bottomCard">
-                            <!-- <button><img src="../../../../assets/subtraction-sign.png" alt=""></button> -->
                             <p>Quantity:</p><input type="number" value="{{food.quantity}}">
-                            <!-- <button><img src="../../../../assets/plus.png" alt=""></button> -->
-                            <button (click)="addToDash(food)">Add To Dashboard</button>
-                            <!-- <button (click)="addItemToDash(foods)">Add New Item to Cart</button> -->
-                            <!-- <button class="addToDash"><img src="../../../../assets/plus.png" alt=""></button> -->
+                            <button (click)="addToDash(food)">Add!</button>
                         </div>
                     </li>
                 }
             }
     </ul>
 </div>
-
-<!-- <app-form (formSent)="registerProduct($event)"></app-form> -->
-<!-- <app-form (formSent)="handleFormSubmission($event)"></app-form> -->
-
-<!-- ADD PRODUCTS TO CART
-https://angular.io/start/start-data -->

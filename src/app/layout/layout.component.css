@@ -1,0 +1,7 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
+  height: 100%;
+  background-repeat: round;
+}/*# sourceMappingURL=layout.component.css.map */

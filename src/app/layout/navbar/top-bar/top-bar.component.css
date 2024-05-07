@@ -1,0 +1,33 @@
+:host {
+  width: 100%;
+  background-color: rgb(168, 32, 57);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+.buttonContainer button {
+  background-color: white;
+  border: rgb(168, 32, 57) 2px solid;
+  padding: 0.4rem;
+  border-radius: 2rem;
+}
+
+.formContainer {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titleContainer img {
+  width: 12rem;
+}/*# sourceMappingURL=top-bar.component.css.map */
