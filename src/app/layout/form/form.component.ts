@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { ReactiveFormsModule, FormsModule, NgForm } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule, FormGroup, Validators, FormBuilder, NgForm } from '@angular/forms';
 import { Foods } from '../../shared/interfaces/foods';
 
 @Component({
@@ -10,9 +10,10 @@ import { Foods } from '../../shared/interfaces/foods';
   styleUrl: './form.component.scss'
 })
 export class FormComponent {
+  
   @Output() formSent=new EventEmitter();
   formVisible: boolean = true;
-
+  
   submit(foodForm:NgForm){
     const foodItem:Foods={
       id: 999,
@@ -21,10 +22,55 @@ export class FormComponent {
       image: foodForm.controls['image'].value,
       quantity: foodForm.controls['quantity'].value
     }
-
+  
     this.formSent.emit(foodItem)
     foodForm.resetForm()
     console.log(this.formSent)
     this.formVisible = false;
   }
+
+ // REACTIVE FORM /////////////////////////
+  // form!: FormGroup;
+  // submitted = false;
+  
+  
+  // constructor(private fb:FormBuilder){
+  //   this.form = fb.group({
+  //     image: [
+  //       '',
+  //       Validators.required
+  //     ],
+  //     name: [
+  //       '',
+  //       [Validators.required,
+  //         Validators.minLength(2)]
+  //     ],
+  //     calories: [
+  //       '',
+  //       Validators.required
+  //     ]
+  //   })
+  // }
+  
+  // get registerFormControl(){
+  //   return this.form.controls
+  // }
+  
+  // onSubmit(){
+  //   if (this.form.valid && !this.submitted){
+  //     // alert(JSON.stringify(this.registerForm.value))
+  //     this.submitted = true;
+  //   } else {
+  //     alert("Your product has been saved")
+  //   }
+  // }
+  
+  // resetForm(){
+  //   this.form.reset()
+  //   this.submitted = false;
+  // }
+
+  //////FORM IN CLASS ///////////
+
+    
 }
