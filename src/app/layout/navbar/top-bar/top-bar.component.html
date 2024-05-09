@@ -1,0 +1,13 @@
+<div class="titleContainer">
+    <img src="../../../assets/logo3.png" alt="">
+</div>
+
+<div class="buttonContainer">
+    <button (click)="onPress()">
+    Add Your Own
+    </button>
+</div>
+
+<div class="formContainer" [hidden]="!display">
+    <app-form (formSent)="registerProduct($event)"></app-form>
+</div>

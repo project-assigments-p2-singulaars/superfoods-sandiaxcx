@@ -1,0 +1,33 @@
+@if (formVisible) {
+<form #foodForm="ngForm" (ngSubmit)="submit(foodForm)">
+    <div>
+        <label for="image">Image:</label>
+        <input type="string" #foodImage="ngModel" name="image" ngModel>
+        <!-- @if(form.controls.image.touched && form.controls.image.errors?.['required']){
+            <p>Image is required</p>
+        } -->
+</div>
+<div>
+    <label for="name">Name:</label>
+    <input type="text" #foodName="ngModel" name="name" ngModel>
+    <!-- @if((form.controls.name.touched && form.controls.name.errors?.['minlength']) || (form.controls.name.touched && form.controls.name.errors?.['required'])){
+        <p>Product name is required</p>
+    } -->
+</div>
+<div>
+    <label for="calories">Calories:</label>
+    <input type="number" #foodCalories="ngModel" name="calories" ngModel>
+        <!-- @if(form.controls.calories.touched && form.controls.calories.errors?.['required']){
+            <p>Please write a valid calories number.</p>
+        } -->
+</div>
+<div>
+    <label for="quantity">Quantity:</label>
+    <input type="number" #foodQuantity="ngModel" name="quantity" ngModel>
+        <!-- @if(form.controls.calories.touched && form.controls.calories.errors?.['required']){
+            <p>Please write a valid calories number.</p>
+        } -->
+</div>
+<button type="submit">Add</button>
+</form>
+}

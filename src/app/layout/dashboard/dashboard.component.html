@@ -1,0 +1,17 @@
+  <div class="dashboard">
+    <div class="total">
+      <p>Total Calories: {{ getTotalCalories() }}</p>
+    </div>
+    <ul>
+      @for (dash of dashboardService.getItems(); track dash.id){
+        <div class="topCard">
+          <img [src]="dash.image" alt="{{dash.name}}">
+          <p class="foodName">{{dash.name}}</p>
+          <p>{{dash.calories}} cal.</p>
+      </div>
+      <div class="bottomCard">
+        <p>Quantity:{{dash.quantity}}</p>
+      </div>
+      }
+    </ul>
+  </div>

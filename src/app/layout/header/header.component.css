@@ -1,0 +1,11 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  background-color: rgb(168, 32, 57);
+}
+:host img {
+  height: 25vh;
+}/*# sourceMappingURL=header.component.css.map */

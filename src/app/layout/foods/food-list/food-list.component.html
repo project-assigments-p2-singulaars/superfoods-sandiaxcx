@@ -1,0 +1,39 @@
+<div class="search">
+    <input type="text" (input)="searchFood()" placeholder={{valuePlaceholder}} [(ngModel)]="inputValue">
+    <button>Search</button>
+</div>
+
+<div class="foodDetail">
+    <ul>
+        @if (filterArray.length >0) {
+            @for (food of filterArray; track food.id) {
+                <li>
+                    <div class="topCard">
+                        <img [src]="food.image" alt={{food.name}}>
+                        <p class="foodName">{{food.name}}</p>
+                        <p>{{food.calories}} cal.</p>
+                    </div>
+                    <div class="bottomCard">
+                        <p>Quantity:</p><input type="number" value="{{food.quantity}}">
+                        <button (click)="addToDash(food)">Add!</button>
+                    </div>
+                </li> 
+            }
+        }
+            @else {
+                @for (food of foodProducts; track food.id) {
+                    <li>
+                        <div class="topCard">
+                            <img [src]="food.image" alt="{{food.name}}">
+                            <p class="foodName">{{food.name}}</p>
+                            <p>{{food.calories}} cal.</p>
+                        </div>
+                        <div class="bottomCard">
+                            <p>Quantity:</p><input type="number" value="{{food.quantity}}">
+                            <button (click)="addToDash(food)">Add!</button>
+                        </div>
+                    </li>
+                }
+            }
+    </ul>
+</div>
