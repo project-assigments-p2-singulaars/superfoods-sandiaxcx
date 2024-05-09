@@ -1,3 +1,4 @@
+@if (formVisible) {
 <form #foodForm="ngForm" (ngSubmit)="submit(foodForm)">
     <div>
         <label for="image">Image:</label>
@@ -29,3 +30,4 @@
 </div>
 <button type="submit">Add</button>
 </form>
+}
